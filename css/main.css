@@ -291,3 +291,7 @@ input[placeholder="YOUR MESSAGE *"] {
 	margin: 0 auto:;
     display: block;
 }
+
+#bot-button {
+	margin-bottom: 50px;
+}

@@ -217,20 +217,39 @@
           <div class="col-md-5 col-md-offset-1">
             <form>
                <div class="form-group">
-                  <input type="text" class="form-control" id="exampleName" placeholder="YOUR NAME *">
+                  <input type="text" class="form-control" id="exampleName" placeholder="Ваша фамилия, имя и отчество *" required="true">
                 </div>
                 <div class="form-group">
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="YOUR EMAIL *">
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Ваш e-mail *" required="true" pattern="[a-z0-9._%-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
                 </div>
-              <div class="form-group">
-                  <input type="text" class="form-control" id="exampleInputEmail" placeholder="SUBJECT">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="exampleSpecies" placeholder="Вид вашего животного *" required="true" pattern="[А-Яа-яЁё]{2,}">
+                </div>
+                <div class="form-group">
+                  <p>Возраст Вашего животного(0-20)</p>
+                  <input type="range" class="form-control" id="exampleAge" min="0" max="20" step="1" value="0">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="exampleNameAnimal" placeholder="Кличка вашего животного">
+                </div>
+                <div class="form-group">
+                  <p>Желаемая дата приёма*</p>
+                  <input type="date" class="form-control" id="exampleDate" required="true">
+                </div>
+                <div class="form-group">
+                  <p>Желаемое время приёма</p>
+                  <input type="time" class="form-control" id="exampleTime">
+                </div>
+                <div class="form-group">
+                  <p>Контактный телефон*</p>
+                  <input type="tel" class="form-control" id="examplePhone" pattern="\+7\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\[0-9]{2}">
                 </div>
             </form>
           </div>
           <div class="col-md-5">
             <form>
               <div class="form-group">
-                <textarea type="text" class="form-control" placeholder="YOUR MESSAGE *">
+                <textarea style="height:765px;" type="text" class="form-control" placeholder="Комментарии по обращению с животным">
                 </textarea>
               </div>
             </form>
@@ -238,8 +257,8 @@
         </div>
         <div class="row">
           <div class="col-md-2 col-md-offset-5">
-            <button type="button" class="btn btn-default yellow yellow-bot">
-              TELL ME MORE
+            <button type="button" id="bot-button" class="btn btn-default yellow yellow-bot">
+              Отправить
             </button>
           </div>
         </div>
